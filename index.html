@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salt'n Peper</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        .slider {
+          overflow: hidden;
+          position: relative;
+          width: 100%;
+        }
+        .slides {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+        }
+        .slides img {
+          width: 100%;
+          flex-shrink: 0;
+        }
+        .nav-btn {
+          background-color: rgba(0, 0, 0, 0.5);
+          color: white;
+          cursor: pointer;
+          height: 60px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 40px;
+        }
+        .prev {
+          left: 10px;
+        }
+        .next {
+          right: 10px;
+        }
+      </style>
+</head>
+
+<!-- Navbar -->
+<body class="m-0 p-0 bg-black text-white">
+    <div class="flex py-3 w-full justify-between px-5  text-white bg-black">
+        <a  class="px-32 pt-2 text-xl font-medium" href="">SALT N PEPER</a>
+        <div class="flex gap-10 ">
+            <a class="pt-2" href="/index.html">Home</a>
+            <a class="pt-2" href="./about.html">About Us</a>
+            <a class="pt-2" href="/publication.html">Publication</a>
+            <a class="pt-2" href="">Feedback</a>
+            <div class="bg-black border-2 border-white-400 rounded-3xl px-3 py-2"><a href="">Get a franchies</a></div>
+            <div class="bg-red-500 border-2 border-white-400 rounded-3xl px-3 py-2"><a href="">Order Online</a></div>
+        </div>
+    </div>
+    <!-- Navbar Ends -->
+    <div class="">
+    <div class="slider relative w-full max-w-4xl mx-auto">
+        <div class="slides flex">
+          <img src="/slide1.png" alt="Image 1">
+          <img src="/slide 2.png" alt="Image 2">
+          <img src="slide 3.png" alt="Image 3">
+        </div>
+        <button class="nav-btn prev absolute left-0 top-1/2 transform -translate-y-1/2 p-2">&lt;</button>
+        <button class="nav-btn next absolute right-0 top-1/2 transform -translate-y-1/2 p-2">&gt;</button>
+      </div>
+    
+      <script>
+        const slides = document.querySelector('.slides');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        let index = 0;
+    
+        function showSlide(idx) {
+          const slideWidth = slides.children[0].clientWidth;
+          slides.style.transform = `translateX(${-idx * slideWidth}px)`;
+        }
+    
+        prevBtn.addEventListener('click', () => {
+          index = (index > 0) ? index - 1 : slides.children.length - 1;
+          showSlide(index);
+        });
+    
+        nextBtn.addEventListener('click', () => {
+          index = (index < slides.children.length - 1) ? index + 1 : 0;
+          showSlide(index);
+        });
+      </script>
+      </div>
+
+
+    <!-- Salts  -->
+<center>
+    <div>
+       <h1 class="text-xl"> Welcome To <h1 class="text-2xl font-extrabold">Salt'n Peper</h1></h1>
+       <h1 class="text-xl">Restaurants! Our Brands</h1>
+       <p class="font-extralight">Please click our brands below for further information, reservations or to order online!</p>
+    </div></center><br>
+    <div class="flex gap-10 w-40 ml-96">
+     <img src="/salt n peper.webp" alt="">
+     <img src="/salt n peper.webp" alt="">
+     <img src="/salt n peper.webp" alt="">
+    </div>  <br><br>
+
+    <!-- Locations -->
+     <div class=" bg-gray-950">
+    <div class="bg-gray-950">
+        <center>
+            <h1 class="font-extrabold text-4xl font-serif">Salt'n Peper</h1>
+            <h1 class="font-bold text-2xl">Resturant Frenchieses</h1>
+            <p>Each of our franchises are individually managed. For further details, kindly contact them directly.</p><br>
+        </center>
+        <div class="px-32">
+            <p class="text-red-500">Islamabad</p><br>
+            <div class="flex gap-40">
+                <div>
+                <h1 class="text-3xl font font-extrabold">Salt'n Peper</h1><br>
+                <p> Plot# 55, Shabbir Plaza, Blue Area, F-6, Islamabad</p><br>
+                <p> Ph: 051-2604904-6</p><br>
+                <div class="border-2 border-white rounded-2xl w-40 flex justify-center items-center"> <a target="_blank" href="https://www.google.com/maps/place/Salt'n+Pepper+Faisalabad/@31.4091532,73.1158073,16z/data=!4m20!1m13!4m12!1m4!2m2!1d74.2728461!2d31.469693!4e1!1m6!1m2!1s0x392268713e3c4641:0x7e76a59fd46ab22b!2sSalt+n+Pepper+Restaurant++4-Kohinoor+City,+Faisalabad!2m2!1d73.1190886!2d31.4108563!3m5!1s0x392268713e3c4641:0x7e76a59fd46ab22b!8m2!3d31.4108563!4d73.1190886!16s%2Fg%2F11c1rsjvlh?entry=ttu">Get Direction</a></div>
+            </div>
+                <img src="/123.webp" alt="">
+            </div>
+        </div>
+         
+    </div>
+        <div class="px-32 flex-row-reverse">
+            <p class="text-red-500">Faislabad</p><br>
+            <div class=" flex gap-80">
+                <div>
+                <h1 class="text-3xl font font-extrabold">Salt'n Peper</h1><br>
+                <p>  4-Kohinoor City, Faisalabad</p><br>
+                <p> Ph: 051-2604904-6</p><br>
+                <div class="border-2 border-white rounded-2xl w-40 flex justify-center items-center"> <a target="_blank" href="https://www.google.com/maps/place/Salt'n+Pepper+Faisalabad/@31.4091532,73.1158073,16z/data=!4m20!1m13!4m12!1m4!2m2!1d74.2728461!2d31.469693!4e1!1m6!1m2!1s0x392268713e3c4641:0x7e76a59fd46ab22b!2sSalt+n+Pepper+Restaurant++4-Kohinoor+City,+Faisalabad!2m2!1d73.1190886!2d31.4108563!3m5!1s0x392268713e3c4641:0x7e76a59fd46ab22b!8m2!3d31.4108563!4d73.1190886!16s%2Fg%2F11c1rsjvlh?entry=ttu">Get Direction</a></div>
+            </div>
+                <img src="/safe.webp" alt="">
+            </div>
+        </div>
+         
+    </div>
+        <div class="px-32 bg-gray-950">
+            <p class="text-red-500">Bhawalpur</p><br>
+            <div class="flex gap-40">
+                <div>
+                <h1 class="text-3xl font font-extrabold">Salt'n Peper</h1><br>
+                <p>  D.C Chowk, opposite Commissioner House, Bahawalpur</p><br>
+                <p> Ph: 051-2604904-6</p><br>
+                <div class="border-2 border-white rounded-2xl w-40 flex justify-center items-center"> <a target="_blank" href="https://www.google.com/maps/place/Salt'n+Pepper+Faisalabad/@31.4091532,73.1158073,16z/data=!4m20!1m13!4m12!1m4!2m2!1d74.2728461!2d31.469693!4e1!1m6!1m2!1s0x392268713e3c4641:0x7e76a59fd46ab22b!2sSalt+n+Pepper+Restaurant++4-Kohinoor+City,+Faisalabad!2m2!1d73.1190886!2d31.4108563!3m5!1s0x392268713e3c4641:0x7e76a59fd46ab22b!8m2!3d31.4108563!4d73.1190886!16s%2Fg%2F11c1rsjvlh?entry=ttu">Get Direction</a></div>
+            </div>
+                <img class="h-64 w-7/12" src="/bhawalpur.webp" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+
+<!-- Express Franchies -->
+
+         <div>
+            <center><h1 class="text-4xl font-extrabold">Salt'n Paper</h1>
+            <h1 class="text-3xl font-semibold">Express Franchise</h1></center>
+         </div><br><br>
+           <div class="flex gap-10 justify-center items-center">
+         <div><center>
+            <div><img class="h-52 w-72" src="/saltsss.webp" alt="">
+            <p class="text-red-500">EMPORIUM MALL</p> 
+        <h1 class="text-xl font-bold">Salts n Peper</h1> <p> 2nd Floor, Food Court Emporium Mall</p><p>Ph: 0311-1100947</p></div><br>
+        <div class="border-2 border-white rounded-2xl w-40 flex justify-center items-center"> <a target="_blank" href="https://www.google.com/maps/place/Salt'n+Pepper+Faisalabad/@31.4091532,73.1158073,16z/data=!4m20!1m13!4m12!1m4!2m2!1d74.2728461!2d31.469693!4e1!1m6!1m2!1s0x392268713e3c4641:0x7e76a59fd46ab22b!2sSalt+n+Pepper+Restaurant++4-Kohinoor+City,+Faisalabad!2m2!1d73.1190886!2d31.4108563!3m5!1s0x392268713e3c4641:0x7e76a59fd46ab22b!8m2!3d31.4108563!4d73.1190886!16s%2Fg%2F11c1rsjvlh?entry=ttu">Get Direction</a></div>
+    </center></div>
+         <div><center>
+            <div><img class="h-52 w-72" src="/saltsss.webp" alt="">
+            <p class="text-red-500">GUJRANWALA</p> 
+        <h1 class="text-xl font-bold">Salts n Peper</h1> <p> 2nd Floor, Food Court Emporium Mall</p><p>Ph: 0311-1100947</p></div><br>
+        <div class="border-2 border-white rounded-2xl w-40 flex justify-center items-center"> <a target="_blank" href="https://www.google.com/maps/place/Salt'n+Pepper+Faisalabad/@31.4091532,73.1158073,16z/data=!4m20!1m13!4m12!1m4!2m2!1d74.2728461!2d31.469693!4e1!1m6!1m2!1s0x392268713e3c4641:0x7e76a59fd46ab22b!2sSalt+n+Pepper+Restaurant++4-Kohinoor+City,+Faisalabad!2m2!1d73.1190886!2d31.4108563!3m5!1s0x392268713e3c4641:0x7e76a59fd46ab22b!8m2!3d31.4108563!4d73.1190886!16s%2Fg%2F11c1rsjvlh?entry=ttu">Get Direction</a></div>
+    </center></div>
+         <div><center>
+            <div><img class="h-52 w-72" src="/saltsss.webp" alt="">
+            <p class="text-red-500">SARGHODA</p> 
+        <h1 class="text-xl font-bold">Salts n Peper</h1> <p> 2nd Floor, Food Court Emporium Mall</p><p>Ph: 0311-1100947</p></div><br>
+        <div class="border-2 border-white rounded-2xl w-40 flex justify-center items-center"> <a target="_blank" href="https://www.google.com/maps/place/Salt'n+Pepper+Faisalabad/@31.4091532,73.1158073,16z/data=!4m20!1m13!4m12!1m4!2m2!1d74.2728461!2d31.469693!4e1!1m6!1m2!1s0x392268713e3c4641:0x7e76a59fd46ab22b!2sSalt+n+Pepper+Restaurant++4-Kohinoor+City,+Faisalabad!2m2!1d73.1190886!2d31.4108563!3m5!1s0x392268713e3c4641:0x7e76a59fd46ab22b!8m2!3d31.4108563!4d73.1190886!16s%2Fg%2F11c1rsjvlh?entry=ttu">Get Direction</a></div>
+    </center></div>
+      
+
+        </div><br><br>
+      <!-- Second line-->
+           <div class="flex gap-10 justify-center items-center">
+         <div><center>
+            <div><img class="h-52 w-72" src="/saltsss.webp" alt="">
+            <p class="text-red-500">JHELUM</p> 
+        <h1 class="text-xl font-bold">Salts n Peper</h1> <p> 2nd Floor, Food Court Emporium Mall</p><p>Ph: 0311-1100947</p></div><br>
+        <div class="border-2 border-white rounded-2xl w-40 flex justify-center items-center"> <a target="_blank" href="https://www.google.com/maps/place/Salt'n+Pepper+Faisalabad/@31.4091532,73.1158073,16z/data=!4m20!1m13!4m12!1m4!2m2!1d74.2728461!2d31.469693!4e1!1m6!1m2!1s0x392268713e3c4641:0x7e76a59fd46ab22b!2sSalt+n+Pepper+Restaurant++4-Kohinoor+City,+Faisalabad!2m2!1d73.1190886!2d31.4108563!3m5!1s0x392268713e3c4641:0x7e76a59fd46ab22b!8m2!3d31.4108563!4d73.1190886!16s%2Fg%2F11c1rsjvlh?entry=ttu">Get Direction</a></div>
+    </center></div>
+         <div><center>
+            <div><img class="h-52 w-72" src="/saltsss.webp" alt="">
+            <p class="text-red-500">FAISAL TOWN</p> 
+        <h1 class="text-xl font-bold">Salts n Peper</h1> <p> 2nd Floor, Food Court Emporium Mall</p><p>Ph: 0311-1100947</p></div><br>
+        <div class="border-2 border-white rounded-2xl w-40 flex justify-center items-center"> <a target="_blank" href="https://www.google.com/maps/place/Salt'n+Pepper+Faisalabad/@31.4091532,73.1158073,16z/data=!4m20!1m13!4m12!1m4!2m2!1d74.2728461!2d31.469693!4e1!1m6!1m2!1s0x392268713e3c4641:0x7e76a59fd46ab22b!2sSalt+n+Pepper+Restaurant++4-Kohinoor+City,+Faisalabad!2m2!1d73.1190886!2d31.4108563!3m5!1s0x392268713e3c4641:0x7e76a59fd46ab22b!8m2!3d31.4108563!4d73.1190886!16s%2Fg%2F11c1rsjvlh?entry=ttu">Get Direction</a></div>
+    </center></div>
+         <div><center>
+            <div><img class="h-52 w-72" src="/saltsss.webp" alt="">
+            <p class="text-red-500">D-H-A</p> 
+        <h1 class="text-xl font-bold">Salts n Peper</h1> <p> 2nd Floor, Food Court Emporium Mall</p><p>Ph: 0311-1100947</p></div><br>
+        <div class="border-2 border-white rounded-2xl w-40 flex justify-center items-center"> <a target="_blank" href="https://www.google.com/maps/place/Salt'n+Pepper+Faisalabad/@31.4091532,73.1158073,16z/data=!4m20!1m13!4m12!1m4!2m2!1d74.2728461!2d31.469693!4e1!1m6!1m2!1s0x392268713e3c4641:0x7e76a59fd46ab22b!2sSalt+n+Pepper+Restaurant++4-Kohinoor+City,+Faisalabad!2m2!1d73.1190886!2d31.4108563!3m5!1s0x392268713e3c4641:0x7e76a59fd46ab22b!8m2!3d31.4108563!4d73.1190886!16s%2Fg%2F11c1rsjvlh?entry=ttu">Get Direction</a></div>
+    </center></div>
+      
+
+        </div><br><br>
+      <!-- THIRD LINE -->
+           <div class="flex gap-10 justify-center items-center">
+         <div><center>
+            <div><img class="h-52 w-72" src="/saltsss.webp" alt="">
+            <p class="text-red-500">BAHARIA TOWN</p> 
+        <h1 class="text-xl font-bold">Salts n Peper</h1> <p> 2nd Floor, Food Court Emporium Mall</p><p>Ph: 0311-1100947</p></div><br>
+        <div class="border-2 border-white rounded-2xl w-40 flex justify-center items-center"> <a target="_blank" href="https://www.google.com/maps/place/Salt'n+Pepper+Faisalabad/@31.4091532,73.1158073,16z/data=!4m20!1m13!4m12!1m4!2m2!1d74.2728461!2d31.469693!4e1!1m6!1m2!1s0x392268713e3c4641:0x7e76a59fd46ab22b!2sSalt+n+Pepper+Restaurant++4-Kohinoor+City,+Faisalabad!2m2!1d73.1190886!2d31.4108563!3m5!1s0x392268713e3c4641:0x7e76a59fd46ab22b!8m2!3d31.4108563!4d73.1190886!16s%2Fg%2F11c1rsjvlh?entry=ttu">Get Direction</a></div>
+    </center></div>
+         <div><center>
+            <div><img class="h-52 w-72" src="/saltsss.webp" alt="">
+            <p class="text-red-500">GUJAR KHAN</p> 
+        <h1 class="text-xl font-bold">Salts n Peper</h1> <p> 2nd Floor, Food Court Emporium Mall</p><p>Ph: 0311-1100947</p></div><br>
+        <div class="border-2 border-white rounded-2xl w-40 flex justify-center items-center"> <a target="_blank" href="https://www.google.com/maps/place/Salt'n+Pepper+Faisalabad/@31.4091532,73.1158073,16z/data=!4m20!1m13!4m12!1m4!2m2!1d74.2728461!2d31.469693!4e1!1m6!1m2!1s0x392268713e3c4641:0x7e76a59fd46ab22b!2sSalt+n+Pepper+Restaurant++4-Kohinoor+City,+Faisalabad!2m2!1d73.1190886!2d31.4108563!3m5!1s0x392268713e3c4641:0x7e76a59fd46ab22b!8m2!3d31.4108563!4d73.1190886!16s%2Fg%2F11c1rsjvlh?entry=ttu">Get Direction</a></div>
+    </center></div>
+         <div><center>
+            <div><img class="h-52 w-72" src="/saltsss.webp" alt="">
+            <p class="text-red-500">LAHORE</p> 
+        <h1 class="text-xl font-bold">Salts n Peper</h1> <p> 2nd Floor, Food Court Emporium Mall</p><p>Ph: 0311-1100947</p></div><br>
+        <div class="border-2 border-white rounded-2xl w-40 flex justify-center items-center"> <a target="_blank" href="https://www.google.com/maps/place/Salt'n+Pepper+Faisalabad/@31.4091532,73.1158073,16z/data=!4m20!1m13!4m12!1m4!2m2!1d74.2728461!2d31.469693!4e1!1m6!1m2!1s0x392268713e3c4641:0x7e76a59fd46ab22b!2sSalt+n+Pepper+Restaurant++4-Kohinoor+City,+Faisalabad!2m2!1d73.1190886!2d31.4108563!3m5!1s0x392268713e3c4641:0x7e76a59fd46ab22b!8m2!3d31.4108563!4d73.1190886!16s%2Fg%2F11c1rsjvlh?entry=ttu">Get Direction</a></div>
+    </center></div>
+        </div>
+
+
+        
+      
+
+
+    <br><br><br>
+     <!-- footer started -->
+    <footer class=" px-5 pt-10 bg-gray-950 flex gap-52">
+        <ul> <h1 class="font-bold text-xl">Salt'n Peper</h1> <br> 
+            <p>The Salt’n Pepper Restaurants are an example of gracious dinning, outstanding service, extraordinary classic and contemporary cuisine. The restaurants have become the ultimate dinning destinations in Lahore. From family occasions to business dinner and moments of the heart, this place is where unforgettable memories are made.</p>    
+        </ul>
+        <ul>
+            <h1 class="font-bold text-xl">Site Links</h1>
+            <br>
+            <a href="/index.html">Home</a>
+            <a href="/about.html">About Us</a>
+            <a href="/publication.html">Publication</a>
+            <a href="">Feedback</a>
+        </ul>
+        <ul>
+            <h1 class="font-bold text-xl">Contact Us</h1><br>
+            <h2>Head Office Address</h2><br>
+            <p>23-Usman Block, New GardenTown, Lahore, Pakistan</p>
+            <br>
+            <h2>Head Office Phone Number</h2><br>
+            <p>+92 42 358 509 31</p>
+            <p>+92 42 358 509 30</p><br>
+            <h2>Email Address</h2><br>
+            <p>snpfood@brain.net.pk</p>
+        </ul>
+        <ul>
+            <h1 class="font-bold text-xl">Follow Us</h1>
+            <div class="">
+            <img class="h-10 w-10" src="https://gifdb.com/images/high/facebook-app-logo-sticker-sgb3lvzpwvlsvpl9.gif" alt="">
+            <img class="h-10 w-10" src="https://cdn.pixabay.com/animation/2022/10/30/18/26/18-26-48-450_512.gif" alt="">
+            <img class="h-10 w-10 " src="https://techcrunch.com/wp-content/uploads/2014/06/twitter-rise.gif" alt="">
+        </div>
+        </ul>
+    </footer>
+    <h1 class="text-2xl">Created By Adil Kamran</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
